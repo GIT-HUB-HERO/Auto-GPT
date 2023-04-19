@@ -8,8 +8,9 @@ dynamic = ["dependencies"]
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements.txt"] }
 
-[tool.setuptools]
-py-modules = ["autogpt"]
+[tool.setuptools.packages.find]
+include = ["autogpt*"]
+namespaces = false
 
 [tool.black]
 line-length = 88
